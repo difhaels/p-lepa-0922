@@ -51,9 +51,9 @@
     <!-- About start -->
     <section id="about" class="text-center">
       <h1 class="text-2xl font-semibold pb-4">About me</h1>
-      <div class="px-5 md:columns-2">
-        <p class="pb-4 md:ml-[355px]">Hi im 18yo, I graduated from SMK Negeri 1 Cileungsi, and now I will become a student at the University Nasional majoring in Information Systems</p>
-        <p class="pb-4 md:mr-[355px]">I know a little about programming especially javasript (html and css) and java, you can count on me a very little about that</p>
+      <div class="px-5 sm:flex sm:mx-auto sm:max-w-lg md:max-w-2xl gap-5">
+        <p class="pb-4">Hi im 18yo and now I will become a student at the University Nasional majoring in Information Systems</p>
+        <p class="pb-4">My knowledge is front end including (html, css and js) and i am used to using tailwind css framework</p>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -68,23 +68,147 @@
     <!-- Project Start -->
     <section id="project" class="text-center bg-slate-200">
       <h1 class="text-2xl font-semibold pb-5">My Project</h1>
-      <div class="sm:columns-1 md:columns-2 md:mx-10 md:flex justify-center">
+      <div class="md:flex justify-center">
+        <!-- Project 1 start -->
+
         <div class="mx-3 mb-3 p-1 rounded-md bg-slate-50 md:max-w-md">
-          <img src="img/project/project2.png" alt="E-commerce1" />
-          <h3>Website E-commerce</h3>
+          <img src="img/project/bisnis 1/thumbnail/thumb.png" alt="E-commerce1" />
+          <h3 class="py-2 bg-slate-500 text-slate-50">Website Bisnis</h3>
+          <div class="flex justify-end gap-2 mr-2 my-3">
+            <button id="project1" class="bg-sky-500 text-slate-50 py-1 px-3 rounded-lg hover:bg-sky-600">preview</button>
+            <!-- if live preview available -->
+            <a href="https://difhaels.github.io/determinix/" target="_blank">
+              <button>
+                <p class="bg-green-500 text-slate-50 py-1 px-3 rounded-lg hover:bg-green-600">live preview</p>
+              </button>
+            </a>
+
+            <!-- if live preview not available -->
+            <!-- <div class="cursor-pointer">
+              <p class="bg-red-500 text-slate-50 py-1 px-3 rounded-lg">live preview not available</p>
+            </div> -->
+          </div>
         </div>
+
+        <!-- Project 1 modal start -->
+        <!-- Overlay element -->
+        <div id="overlay1" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <!-- The dialog -->
+        <div id="dialog1" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[80%] bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+          <h1 class="text-2xl font-semibold">Preview</h1>
+          <div class="py-5 border-t border-b border-gray-300">
+            <div>
+              <h2 class="font-semibold">Desktop view</h2>
+              <div class="sm:flex justify-center gap-3">
+                <img src="img/project/bisnis 1/preview/desktop1.png" alt="desktop view" class="md:w-[600px] mb-3 p-5" />
+                <img src="img/project/bisnis 1/preview/desktop2.png" alt="desktop view" class="md:w-[600px] p-5" />
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <!-- This button is used to close the dialog -->
+            <button id="close1" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">Close</button>
+          </div>
+        </div>
+
+        <!-- Javascript code -->
+        <script>
+          var openButton1 = document.getElementById("project1");
+          var dialog1 = document.getElementById("dialog1");
+          var closeButton1 = document.getElementById("close1");
+          var overlay1 = document.getElementById("overlay1");
+
+          // show the overlay and the dialog
+          openButton1.addEventListener("click", function () {
+            dialog1.classList.remove("hidden");
+            overlay1.classList.remove("hidden");
+          });
+
+          // hide the overlay and the dialog
+          closeButton1.addEventListener("click", function () {
+            dialog1.classList.add("hidden");
+            overlay1.classList.add("hidden");
+          });
+        </script>
+        <!-- Project 1 modal end -->
+        <!-- Project 1 end -->
+
+        <!-- Project 2 start -->
+
         <div class="mx-3 mb-3 p-1 rounded-md bg-slate-50 md:max-w-md">
-          <img src="img/project/project3.png" alt="Bisnis1" />
-          <h3>Website Bisnis</h3>
+          <img src="img/project/E-commerce 1/thumnbnail/thumb.png" alt="E-commerce1" />
+          <h3 class="py-2 bg-slate-500 text-slate-50">Website E-commerce (like codashop)</h3>
+          <div class="flex justify-end gap-2 mr-2 my-3">
+            <button id="project2" class="bg-sky-500 text-slate-50 py-1 px-3 rounded-lg hover:bg-sky-600">preview</button>
+            <!-- if live preview available -->
+            <!-- <a href="https://difhaels.github.io" target="_blank">
+                <button>
+                  <p class="bg-green-500 text-slate-50 py-1 px-3 rounded-lg hover:bg-green-600">live preview</p>
+                </button>
+              </a> -->
+
+            <!-- if live preview not available -->
+            <div class="cursor-pointer">
+              <p class="bg-red-500 text-slate-50 py-1 px-3 rounded-lg">live preview not available</p>
+            </div>
+          </div>
         </div>
-        <!-- <div class="mx-3 mb-3 p-1 rounded-md bg-slate-50">
-          <img src="..." alt="..." />
-          <h3>...</h3>
-        </div> -->
+
+        <!-- Project 2 modal start -->
+        <!-- Overlay element -->
+        <div id="overlay2" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+
+        <!-- The dialog -->
+        <div id="dialog2" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[80%] bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+          <h1 class="text-2xl font-semibold">Preview</h1>
+          <div class="py-5 border-t border-b border-gray-300">
+            <div class="md:flex justify-center gap-2">
+              <div>
+                <h2 class="font-semibold">Desktop view</h2>
+                <img src="img/project/E-commerce 1/preview/desktop.png" alt="desktop view" class="md:w-[600px]" />
+              </div>
+              <div class="sm:hidden md:block">
+                <h2 class="font-semibold">Mobile view</h2>
+                <div class="flex justify-center gap-2">
+                  <img src="img/project/E-commerce 1/preview/mobile1.png" alt="mobile view" class="w-40 sm:w-48 md:w-60" />
+                  <img src="img/project/E-commerce 1/preview/mobile2.png" alt="mobile view" class="w-40 sm:w-48 md:w-60" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <!-- This button is used to close the dialog -->
+            <button id="close2" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">Close</button>
+          </div>
+        </div>
+
+        <!-- Javascript code -->
+        <script>
+          var openButton2 = document.getElementById("project2");
+          var dialog2 = document.getElementById("dialog2");
+          var closeButton2 = document.getElementById("close2");
+          var overlay2 = document.getElementById("overlay2");
+
+          // show the overlay and the dialog
+          openButton2.addEventListener("click", function () {
+            dialog2.classList.remove("hidden");
+            overlay2.classList.remove("hidden");
+          });
+
+          // hide the overlay and the dialog
+          closeButton2.addEventListener("click", function () {
+            dialog2.classList.add("hidden");
+            overlay2.classList.add("hidden");
+          });
+        </script>
+        <!-- Project 2 modal end -->
+        <!-- Project 2 end -->
       </div>
-      <h3 class="m-3">Want know more about my project?</h3>
-      <a href="">
-        <span class="bg-sky-500 px-3 py-1 rounded-md cursor-pointer text-slate-50 hover:bg-sky-300 mb-3">click here</span>
+
+      <h3 class="m-3">If the live preview is not available you can request via</h3>
+      <a href="https://wa.me/+62895337305533">
+        <span class="bg-green-500 px-3 py-1 rounded-md cursor-pointer text-slate-50 hover:bg-green-600 mb-3">WhatsApp</span>
       </a>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
