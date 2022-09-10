@@ -410,12 +410,6 @@ video {
   height: auto;
 }
 
-.parent-text {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
